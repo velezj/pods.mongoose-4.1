@@ -71,14 +71,12 @@ unarchive:
 
 build-source:
 	@echo "\n Building $(POD_NAME) \n"
-	@mkdir -p pod-build
-	cd pod-build && ../$(POD_NAME)/configure --prefix=$(BUILD_PREFIX)
-	cd pod-build && make
 	@touch built.touch
 
 install-source:
 	@echo "\n Installing $(POD_NAME) \n"
-	cd pod-build && make install
+	mkdir -p $(BUILD_PREFIX)/include/mongoose/
+	cp mongoose/mongoose.* $(BUILD_PREFIX)/include/mongoose/
 	@touch installed.touch
 
 pkgconfig-source:
