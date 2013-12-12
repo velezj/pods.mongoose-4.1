@@ -17,7 +17,7 @@ pods_use_pkg_config_packages(mongoose-4.1 boost-1.54.0)
 pods_install_libraries( mongoose-4.1 )
 pods_install_pkg_config_file(mongoose-4.1
     CFLAGS
-    LIBS -lmongoose-4.1
+    LIBS -lmongoose-4.1 -lpthread
     REQUIRES boost-1.54.0
     VERSION 4.1.0)
 

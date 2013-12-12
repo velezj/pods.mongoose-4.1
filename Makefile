@@ -88,8 +88,8 @@ pkgconfig-source:
 clean:
 	-if [ -e pod-build/install_manifest.txt ]; then rm -f `cat pod-build/install_manifest.txt`; fi
 	-if [ -d pod-build ]; then $(MAKE) -C pod-build clean; rm -rf pod-build; fi
-	rm -rf $(POD_NAME)
-	rm unarchived.touch built.touch installed.touch pkgconfiged.touch
+
+
 
 # other (custom) targets are passed through to the cmake-generated Makefile 
 %::
