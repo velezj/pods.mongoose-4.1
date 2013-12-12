@@ -33,7 +33,7 @@ pod-build/Makefile:
 	$(MAKE) configure
 
 .PHONY: configure
-configure: pkgconfiged.touch
+configure: 
 	@echo "\nBUILD_PREFIX: $(BUILD_PREFIX)\n\n"
 
 	# create the temporary build directory if needed
