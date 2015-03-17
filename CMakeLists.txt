@@ -4,6 +4,7 @@ cmake_minimum_required(VERSION 2.6.0)
 set(POD_NAME mongoose-4.1)
 include(cmake/pods.cmake)
 
+set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS} -DENABLE_DBG")
 
 add_library( mongoose-4.1 SHARED
   mongoose/mongoose.c
